@@ -1,6 +1,0 @@
-C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\NewLavoratori\NewLavoratori\bin\Release\NewLavoratori.exe.config
-C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\NewLavoratori\NewLavoratori\bin\Release\NewLavoratori.exe
-C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\NewLavoratori\NewLavoratori\bin\Release\NewLavoratori.pdb
-C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\NewLavoratori\NewLavoratori\obj\Release\NewLavoratori.csproj.CoreCompileInputs.cache
-C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\NewLavoratori\NewLavoratori\obj\Release\NewLavoratori.exe
-C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\NewLavoratori\NewLavoratori\obj\Release\NewLavoratori.pdb

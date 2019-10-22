@@ -1,0 +1,7 @@
+C:\Users\CORSO 46\source\repos\Lavoratori\Lavoratori\obj\Debug\Lavoratori.csprojAssemblyReference.cache
+C:\Users\CORSO 46\source\repos\Lavoratori\Lavoratori\obj\Debug\Lavoratori.csproj.CoreCompileInputs.cache
+C:\Users\CORSO 46\source\repos\Lavoratori\Lavoratori\bin\Debug\Lavoratori.exe.config
+C:\Users\CORSO 46\source\repos\Lavoratori\Lavoratori\bin\Debug\Lavoratori.exe
+C:\Users\CORSO 46\source\repos\Lavoratori\Lavoratori\bin\Debug\Lavoratori.pdb
+C:\Users\CORSO 46\source\repos\Lavoratori\Lavoratori\obj\Debug\Lavoratori.exe
+C:\Users\CORSO 46\source\repos\Lavoratori\Lavoratori\obj\Debug\Lavoratori.pdb

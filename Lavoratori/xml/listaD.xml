@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ArrayOfLavoratoreDipendete xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LavoratoreDipendete>
+    <Nome>Federica</Nome>
+    <Cognome>Pellegrini</Cognome>
+    <DataDiNasciata>1988-05-25T00:00:00</DataDiNasciata>
+    <StipendioAnn>50000</StipendioAnn>
+    <DataAssunzione>1983-07-03T00:00:00</DataAssunzione>
+  </LavoratoreDipendete>
+  <LavoratoreDipendete>
+    <Nome>Nunzio</Nome>
+    <Cognome>prova</Cognome>
+    <DataDiNasciata>2000-05-22T00:00:00</DataDiNasciata>
+    <StipendioAnn>25000</StipendioAnn>
+    <DataAssunzione>1998-05-22T00:00:00</DataAssunzione>
+  </LavoratoreDipendete>
+  <LavoratoreDipendete>
+    <Nome>nunzio</Nome>
+    <Cognome>pippo</Cognome>
+    <DataDiNasciata>0001-01-01T00:00:00</DataDiNasciata>
+    <StipendioAnn>123456</StipendioAnn>
+    <DataAssunzione>0001-01-01T00:00:00</DataAssunzione>
+  </LavoratoreDipendete>
+</ArrayOfLavoratoreDipendete>
