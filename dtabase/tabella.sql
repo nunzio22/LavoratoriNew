@@ -34,3 +34,4 @@ VALUES ('Pippo','Baudo',convert(datetime,'18-06-12 10:34:09 PM',5),1000000,NULL,
 
 INSERT INTO Lavoratore(Nome, Cognome, DataDiNascita, StipendioAnnuale, DataDiAssunzione, Tipo)
 VALUES ('Christiano','Ronaldo',convert(datetime,'02-05-01 10:34:09 PM',5),500000000000000,convert(datetime,'17-05-12 10:34:09 PM',5),1);
+GO
