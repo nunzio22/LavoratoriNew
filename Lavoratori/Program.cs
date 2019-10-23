@@ -6,6 +6,7 @@ using System.Text;
 using Lavoratori.Utility;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using System.Data;
 
 namespace Lavoratori
 {
@@ -14,13 +15,21 @@ namespace Lavoratori
         static void Main(string[] args)
         {
 
-            List<LavoratoreAutonomo>listLA = FileUtility.Lav<LavoratoreAutonomo>("listaA.xml");
-            List<LavoratoreDipendete> listLD = FileUtility.Lav<LavoratoreDipendete>("listaD.xml");
+            //List<LavoratoreAutonomo> listLA = FileUtility.Lav<LavoratoreAutonomo>("listaA.xml");
+            //List<LavoratoreDipendete> listLD = FileUtility.Lav<LavoratoreDipendete>("listaD.xml");
+            //List<Lavoratore> listL = new List<Lavoratore>();
+            //listL.AddRange(listLA);
+            //listL.AddRange(listLD);
+            //Console.ReadLine();
+            List<LavoratoreDipendete> listLD = new List<LavoratoreDipendete>();
+            List<LavoratoreAutonomo> listLA = new List<LavoratoreAutonomo>();
+            DataSet ds = DBUtility.GetPersone();
+            List.InsertList(ds,listLD,listLA);      
+            Console.ReadLine();
             List<Lavoratore> listL = new List<Lavoratore>();
             listL.AddRange(listLA);
-            listL.AddRange(listLD);          
-            Console.ReadLine();
-            
+            listL.AddRange(listLD);
+
             int n;
             bool fine;
             // creazione stringa richiesta
@@ -33,7 +42,8 @@ namespace Lavoratori
                     + "2 Lista dei lavoratori inseriti" + Environment.NewLine
                     + "3 Ordinamento dei Lavoratori per stipendio percepito" + Environment.NewLine
                     + "4 Ordinamento dei lavoratori per anzianita" + Environment.NewLine
-                    + "5 Inserimernto nuovo lavoratore : " + Environment.NewLine);
+                    + "5 Inserimernto nuovo lavoratore : " + Environment.NewLine
+                    +"6 Modifica elemento Lavoratore "+ Environment.NewLine);
                 ric = Console.ReadLine();
                 // serie di if di controllo su ciò che si è scelto
                 if (ric == "1")
@@ -77,12 +87,16 @@ namespace Lavoratori
                 }
                 else if (ric == "5")
                 {
-                    Inserimento.insert(listLA, listLD,listL);
+                    Inserimento.insert(listLA, listLD, listL);
                 }
                 fine = Controllo.AltreOprezioni(" effetuare altre operzioni");
             } while (fine);
 
         }
     }
+       
+        
+
  }
+
 

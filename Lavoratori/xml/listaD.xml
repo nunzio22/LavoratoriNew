@@ -21,4 +21,11 @@
     <StipendioAnn>123456</StipendioAnn>
     <DataAssunzione>0001-01-01T00:00:00</DataAssunzione>
   </LavoratoreDipendete>
+  <LavoratoreDipendete>
+    <Nome>Nunzio</Nome>
+    <Cognome>Verdi</Cognome>
+    <DataDiNasciata>0001-01-01T00:00:00</DataDiNasciata>
+    <StipendioAnn>7852</StipendioAnn>
+    <DataAssunzione>0001-01-01T00:00:00</DataAssunzione>
+  </LavoratoreDipendete>
 </ArrayOfLavoratoreDipendete>

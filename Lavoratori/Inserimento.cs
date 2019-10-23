@@ -17,7 +17,7 @@ namespace Lavoratori
         /// <param name="lav">lista dove vengono inseriti i lavoratori</param>
         public static void insert(List<LavoratoreAutonomo> lavA,List<LavoratoreDipendete> lavD,List<Lavoratore> lavT)
         {
-            string tem;
+            string tem, datastring;
             bool fine;
             Lavoratore temporaneo=new Lavoratore();
             string nome, cognome;
@@ -37,6 +37,9 @@ namespace Lavoratori
                 Console.WriteLine("Cognome lavoratore : ");
                 cognome = Console.ReadLine();
                 stipendioAnn = insertN("lo stipendio annuale");
+                Console.WriteLine("Inserisci la data di nascita : ");
+                datastring = Console.ReadLine();
+                DateTime data = DateTime.Parse(datastring);
                 //dentro if lacia un metodo che ritorna un buleano di tipo false se allinterno del utente essiste già il lavoratore
 
                 if (Controllo.ControlloLavoratore(nome, cognome, stipendioAnn, lavA)||Controllo.ControlloLavoratore(nome, cognome, stipendioAnn, lavD))
@@ -49,8 +52,10 @@ namespace Lavoratori
                              temporaneo.Nome = nome;
                              temporaneo.Cognome = cognome;
                              temporaneo.StipendioAnn = stipendioAnn;
+                             temporaneo.DataDiNasciata = data;
+                             Lavoratori.Utility.DBUtility.InsertPersona(temporaneo);
                              lavD.Add((LavoratoreDipendete)temporaneo);
-                             lavT.Add((Lavoratore)temporaneo);
+                             lavT.Add(temporaneo);
                              //solo per aggiungere lo spazio alla fine della crazione
                              Console.WriteLine(string.Empty);
                        }
@@ -60,6 +65,8 @@ namespace Lavoratori
                            temporaneo.Nome = nome;
                            temporaneo.Cognome = cognome;
                            temporaneo.StipendioAnn = stipendioAnn;
+                           temporaneo.DataDiNasciata = data;
+                           Lavoratori.Utility.DBUtility.InsertPersona(temporaneo);
                            lavA.Add((LavoratoreAutonomo)temporaneo);
                            lavT.Add((Lavoratore)temporaneo);
                            Console.WriteLine(string.Empty);
@@ -74,11 +81,12 @@ namespace Lavoratori
                     }
                 
                 fine = Controllo.AltreOprezioni("inserire altri utenti");
-                if (!fine)
-                {
-                    FileUtility.InsertList<LavoratoreAutonomo>(lavA, "listaA.xml");
-                    FileUtility.InsertList<LavoratoreDipendete>(lavA, "listaD.xml");
-                }
+                //se si vuole lavorare su file
+                //if (!fine)
+                //{
+                //    FileUtility.InsertList<LavoratoreAutonomo>(lavA, "listaA.xml");
+                //    FileUtility.InsertList<LavoratoreDipendete>(lavA, "listaD.xml");
+                //}
             } while (fine);
         }
 

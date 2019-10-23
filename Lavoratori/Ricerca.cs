@@ -29,7 +29,7 @@ namespace Lavoratori
         /// <param name="lav">lista lavoratori</param>
         public static void OrdinamentoSti(List<Lavoratore> lav)
         {
-            //Array.Sort(lav);
+            lav.Sort();
             Ricerca.Lettura(lav);
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Lavoratori
         /// cerca il nome dentro il campo nome dei vari oggetti del arrey e lo stapa a scermo
         /// </summary>
         /// <param name="ric">nome cercato dal utente</param>
-        /// <param name="lav">lista lacoratore</param>
+        /// <param name="lav">lista lavoratore</param>
         internal static void RicercaNome(string ric,List<Lavoratore> lav)
         {
             foreach (var p in lav)
