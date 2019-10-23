@@ -58,7 +58,7 @@ namespace Lavoratori.Utility
             cmd.Connection.Close();
             return ris;
         }
-        public static int UpdatePersona(Lavoratore l)
+        public static int UpdatePersona(Lavoratore l,int tipo)
         {
             int ris;
             SqlCommand cmd = new SqlCommand
@@ -66,20 +66,18 @@ namespace Lavoratori.Utility
                 Connection = GetConnection(),
                 CommandType = CommandType.Text,
                 CommandText = "UPDATE Lavoratore SET  " +
-                "Nome=@Nome, " +
-                "Cognome=@Cognome, " +
-                "DataDiNascita=@DataDiNascita, " +
                 "StipendioAnnuale=@StipendioAnnuale, " +
                 "DataDiAssunzione=@DataDiAssunzione, " +
                 "Tipo=@Tipo " +
                 "WHERE Nome=@Nome AND " +
-                "Cognome=@Cognome"
+                "Cognome=@Cognome AND " +
+                "DataDiNascita=@DataDiNascita"
             };
             cmd.Parameters.Add("@Nome", SqlDbType.VarChar, 255).Value = l.Nome;
             cmd.Parameters.Add("@Cognome", SqlDbType.VarChar, 255).Value = l.Cognome;
             cmd.Parameters.Add("@DataDiNascita", SqlDbType.DateTime).Value = l.DataDiNasciata;
             cmd.Parameters.Add("@StipendioAnnuale", SqlDbType.Float).Value = l.StipendioAnn;
-            if (l is LavoratoreDipendete)
+            if (tipo==1)
             {
                 LavoratoreDipendete lv = (LavoratoreDipendete)l;
                 cmd.Parameters.Add("@DataDiAssunzione", SqlDbType.DateTime).Value = lv.DataAssunzione;
@@ -87,12 +85,11 @@ namespace Lavoratori.Utility
             }
             else
             {
-                cmd.Parameters.Add("@DataDiAssunzione", SqlDbType.DateTime).Value = null;
+                cmd.Parameters.Add("@DataDiAssunzione", SqlDbType.DateTime).Value = DBNull.Value;
                 cmd.Parameters.Add("@Tipo", SqlDbType.Int).Value = 2;
             }
             
 
-            cmd.Parameters.AddWithValue("@Nome", l.Nome);
 
             cmd.Connection.Open();
             ris = cmd.ExecuteNonQuery();

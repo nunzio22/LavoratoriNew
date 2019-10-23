@@ -44,6 +44,37 @@ namespace Lavoratori
                 }
             }
         }
+
+        internal static void UpdateList( List<Lavoratore> listL, Lavoratore up)
+        {
+            var upfin= listL.Where(l => l.Nome == up.Nome && l.Cognome == up.Cognome && l.DataDiNasciata == up.DataDiNasciata).FirstOrDefault();
+            upfin = up;
+            
+        }
+        internal static void UpdateList(List<LavoratoreAutonomo> listLD,  Lavoratore up)
+        {
+            var upfin = listLD.Where(l => l.Nome == up.Nome && l.Cognome == up.Cognome && l.DataDiNasciata == up.DataDiNasciata).FirstOrDefault();
+            LavoratoreAutonomo upA = new LavoratoreAutonomo()
+            {
+                Nome = up.Nome,
+                Cognome = up.Cognome,
+                DataDiNasciata = up.DataDiNasciata,
+                StipendioAnn = up.StipendioAnn
+            };
+            upfin = upA;
+        }
+        internal static void UpdateList(List<LavoratoreDipendete> listLD, Lavoratore up)
+        {
+            var upfin = listLD.Where(l => l.Nome == up.Nome && l.Cognome == up.Cognome && l.DataDiNasciata == up.DataDiNasciata).FirstOrDefault();
+            LavoratoreDipendete upD = new LavoratoreDipendete()
+            {
+                Nome = up.Nome,
+                Cognome = up.Cognome,
+                DataDiNasciata = up.DataDiNasciata,
+                StipendioAnn = up.StipendioAnn
+            };
+            upfin = upD;
+        }
     }
 }
   

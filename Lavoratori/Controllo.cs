@@ -17,13 +17,13 @@ namespace Lavoratori
         /// <param name="stipendio">stipendio del utente che si vuole inserire</param>
         /// <param name="lav">lista di lavoratori</param>
         /// <returns>ritorna un false se l'utente è già presente e true se non è presente </returns>
-        public static bool ControlloLavoratore(string nom, string cognome, int stipendio, List<LavoratoreDipendete> lav)
+        public static bool ControlloLavoratore(string nom, string cognome, DateTime data, List<Lavoratore> lav)
         {
             bool ris = true;
             
             foreach (var k in lav)
             {
-                if (k != null && k.Nome == nom && k.Cognome == cognome && k.StipendioAnn == stipendio)
+                if (k != null && k.Nome == nom && k.Cognome == cognome && k.DataDiNasciata == data)
                 {
                     ris = false;
                     break;
@@ -32,28 +32,7 @@ namespace Lavoratori
             return ris;
         }
 
-        /// <summary>
-        /// controllo se l'utente è già prensente nella nostra lista Lavoratore Autonomo
-        /// </summary>
-        /// <param name="nom">nome del utente che si vuole inserire</param>
-        /// <param name="cognome">cognome del utente che si vuole inserire</param>
-        /// <param name="stipendio">stipendio del utente che si vuole inserire</param>
-        /// <param name="lav">lista di lavoratori</param>
-        /// <returns>ritorna un false se l'utente è già presente e true se non è presente </returns>
-        public static bool ControlloLavoratore(string nom, string cognome, int stipendio, List<LavoratoreAutonomo> lav)
-        {
-            bool ris = true;
-
-            foreach (var k in lav)
-            {
-                if (k != null && k.Nome == nom && k.Cognome == cognome && k.StipendioAnn == stipendio)
-                {
-                    ris = false;
-                    break;
-                }
-            }
-            return ris;
-        }
+        
         /// <summary>
         /// controllo se l'utente vuole effetuare altre operazioni
         /// </summary>

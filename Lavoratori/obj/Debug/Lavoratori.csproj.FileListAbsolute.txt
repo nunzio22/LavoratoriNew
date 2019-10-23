@@ -19,3 +19,9 @@ C:\Users\CORSO 46\Desktop\lavoro\Lavoratori\obj\Debug\Lavoratori.csproj.CoreComp
 C:\Users\CORSO 46\Desktop\lavoro\Lavoratori\obj\Debug\Lavoratori.csproj.CopyComplete
 C:\Users\CORSO 46\Desktop\lavoro\Lavoratori\obj\Debug\Lavoratori.exe
 C:\Users\CORSO 46\Desktop\lavoro\Lavoratori\obj\Debug\Lavoratori.pdb
+C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\Lavoratori\bin\Debug\Lavoratori.exe.config
+C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\Lavoratori\bin\Debug\Lavoratori.exe
+C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\Lavoratori\bin\Debug\Lavoratori.pdb
+C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\Lavoratori\bin\Debug\NLog.dll
+C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\Lavoratori\bin\Debug\NLog.xml
+C:\Users\CORSO 46\Documents\GitHub\LavoratoriNew\Lavoratori\obj\Debug\Lavoratori.csproj.CopyComplete

@@ -14,7 +14,7 @@ namespace Lavoratori
     {
         static void Main(string[] args)
         {
-
+            //scomentare per funzionare con i file
             //List<LavoratoreAutonomo> listLA = FileUtility.Lav<LavoratoreAutonomo>("listaA.xml");
             //List<LavoratoreDipendete> listLD = FileUtility.Lav<LavoratoreDipendete>("listaD.xml");
             //List<Lavoratore> listL = new List<Lavoratore>();
@@ -88,6 +88,10 @@ namespace Lavoratori
                 else if (ric == "5")
                 {
                     Inserimento.insert(listLA, listLD, listL);
+                }
+                else if (ric=="6")
+                {
+                    Inserimento.Mod(listLA, listLD, listL);
                 }
                 fine = Controllo.AltreOprezioni(" effetuare altre operzioni");
             } while (fine);
