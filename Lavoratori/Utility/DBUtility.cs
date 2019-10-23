@@ -59,7 +59,7 @@ namespace Lavoratori.Utility
             cmd.Connection.Close();
             return ris;
         }
-        public static int UpdatePersona(Lavoratore l,int tipo)
+        public static int UpdateLavoratore(Lavoratore l,int tipo)
         {
             int ris;
             SqlCommand cmd = new SqlCommand
@@ -98,7 +98,7 @@ namespace Lavoratori.Utility
 
             return ris;
         }
-        public static void InsertPersona(Lavoratore l)
+        public static void InsertLavoratore(Lavoratore l)
         {
 
 
@@ -136,7 +136,7 @@ namespace Lavoratori.Utility
 
         }
 
-        public static DataSet GetPersone()
+        public static DataSet GetLavoratore()
         {
             DataSet ris = new DataSet();
             string selectQuery = "SELECT Nome,Cognome,DataDiNascita,StipendioAnnuale,DataDiAssunzione,Tipo  " +

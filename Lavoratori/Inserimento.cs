@@ -37,7 +37,7 @@ namespace Lavoratori
 
                     if (tem == "1" || tem == "LAVORATORE DIPENDENTE")
                     {
-                        Lavoratori.Utility.DBUtility.InsertPersona(temporaneo);
+                        Lavoratori.Utility.DBUtility.InsertLavoratore(temporaneo);
                         lavD.Add((LavoratoreDipendete)temporaneo);
                         lavT.Add(temporaneo);
                         //solo per aggiungere lo spazio alla fine della crazione
@@ -45,7 +45,7 @@ namespace Lavoratori
                     }
                     else if (tem == "2" || tem == "LAVORATORE AUTONOMO")
                     {
-                        Lavoratori.Utility.DBUtility.InsertPersona(temporaneo);
+                        Lavoratori.Utility.DBUtility.InsertLavoratore(temporaneo);
                         lavA.Add((LavoratoreAutonomo)temporaneo);
                         lavT.Add((Lavoratore)temporaneo);
                         Console.WriteLine(string.Empty);
@@ -68,7 +68,10 @@ namespace Lavoratori
                 //}
             } while (fine);
         }
-
+        /// <summary>
+        /// creazione lavoratore
+        /// </summary>
+        /// <returns>ritorna il lavoratore creato</returns>
         private static Lavoratore InsertL()
         {
             //creazione utnete si chiede di che tipologia deve essere l'utente per poterlo creare di quel tipo
@@ -89,7 +92,12 @@ namespace Lavoratori
             temporaneo.DataDiNasciata = data;
             return temporaneo;
         }
-
+        /// <summary>
+        /// Modifica lavoratore
+        /// </summary>
+        /// <param name="listLA">lista lavoratori auotnomo</param>
+        /// <param name="listLD">lista lavoratori dipendenti</param>
+        /// <param name="listL">lista lavoratori</param>
         internal static void Mod(List<LavoratoreAutonomo> listLA, List<LavoratoreDipendete> listLD, List<Lavoratore> listL)
         {
             Lavoratore up = InsertL();
@@ -105,12 +113,12 @@ namespace Lavoratori
             List.UpdateList(listL, up);
             if (tem == "1" || tem == "LAVORATORE DIPENDENTE")
             {
-                Lavoratori.Utility.DBUtility.UpdatePersona(up, 1);
+                Lavoratori.Utility.DBUtility.UpdateLavoratore(up, 1);
                 List.UpdateList(listLD,up);
             }
             else if (tem == "2" || tem == "LAVORATORE AUTONOMO")
             {
-                Lavoratori.Utility.DBUtility.UpdatePersona(up, 2);
+                Lavoratori.Utility.DBUtility.UpdateLavoratore(up, 2);
                 List.UpdateList(listLA, up);
             }
             else
@@ -121,7 +129,12 @@ namespace Lavoratori
             
         }
 
-
+        /// <summary>
+        /// elimana un lavoratore all'interno della lista e datebase
+        /// </summary>
+        /// <param name="listLA">lista lavoratori auotnomo</param>
+        /// <param name="listLD">lista lavoratori dipendenti</param>
+        /// <param name="listL">lista lavoratori</param>
         internal static void Elimina(List<LavoratoreAutonomo> listLA, List<LavoratoreDipendete> listLD, List<Lavoratore> listL)
         {
             Lavoratore up = InsertL();

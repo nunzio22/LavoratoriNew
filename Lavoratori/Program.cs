@@ -23,7 +23,7 @@ namespace Lavoratori
             //Console.ReadLine();
             List<LavoratoreDipendete> listLD = new List<LavoratoreDipendete>();
             List<LavoratoreAutonomo> listLA = new List<LavoratoreAutonomo>();
-            DataSet ds = DBUtility.GetPersone();
+            DataSet ds = DBUtility.GetLavoratore();
             List.InsertList(ds,listLD,listLA);      
             Console.ReadLine();
             List<Lavoratore> listL = new List<Lavoratore>();
