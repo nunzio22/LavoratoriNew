@@ -122,6 +122,18 @@ namespace Lavoratori
         }
 
 
+        internal static void Elimina(List<LavoratoreAutonomo> listLA, List<LavoratoreDipendete> listLD, List<Lavoratore> listL)
+        {
+            Lavoratore up = InsertL();
+            Lavoratori.Utility.DBUtility.DelateLavoratore(up);
+            List.DelateElement(listL, up);
+            List.DelateElement(listLA, up);
+            List.DelateElement(listLD, up);
+
+
+        }
+
+
 
         /// <summary>
         /// l'inserimenento del numero dentro una varibile da stringa gestendo le varie eccezioni

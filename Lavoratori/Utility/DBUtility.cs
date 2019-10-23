@@ -49,10 +49,11 @@ namespace Lavoratori.Utility
             {
                 Connection = GetConnection(),
                 CommandType = CommandType.Text,
-                CommandText = "DELETE FROM  Lavoratore WHERE Nome=@Nome Cognome=@Cognome "
+                CommandText = "DELETE FROM  Lavoratore WHERE Nome=@Nome AND Cognome=@Cognome AND DataDiNascita=@DataDiNascita "
             };
             cmd.Parameters.AddWithValue("@Nome", l.Nome);
             cmd.Parameters.AddWithValue("@Cognome", l.Cognome);
+            cmd.Parameters.AddWithValue("@DataDiNascita", l.DataDiNasciata);
             cmd.Connection.Open();
             ris = cmd.ExecuteNonQuery();
             cmd.Connection.Close();

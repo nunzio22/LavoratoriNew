@@ -75,6 +75,34 @@ namespace Lavoratori
             };
             upfin = upD;
         }
+
+        internal static void DelateElement(List<Lavoratore> listLD, Lavoratore up)
+        {
+            
+            var upfin = listLD.Where(l => l.Nome == up.Nome && l.Cognome == up.Cognome && l.DataDiNasciata == up.DataDiNasciata).FirstOrDefault();
+            if (!(upfin == null))
+            {
+                listLD.Remove(upfin);
+            }
+        }
+        internal static void DelateElement(List<LavoratoreDipendete> listLD, Lavoratore up)
+        {
+
+            var upfin = listLD.Where(l => l.Nome == up.Nome && l.Cognome == up.Cognome && l.DataDiNasciata == up.DataDiNasciata).FirstOrDefault();
+            if (!(upfin == null))
+            {
+                listLD.Remove(upfin);
+            }
+        }
+        internal static void DelateElement(List<LavoratoreAutonomo> listLD, Lavoratore up)
+        {
+
+            var upfin = listLD.Where(l => l.Nome == up.Nome && l.Cognome == up.Cognome && l.DataDiNasciata == up.DataDiNasciata).FirstOrDefault();
+            if (!(upfin == null))
+            {
+                listLD.Remove(upfin);
+            }
+        }
     }
 }
   

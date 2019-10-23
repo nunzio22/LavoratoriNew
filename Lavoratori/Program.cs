@@ -43,7 +43,8 @@ namespace Lavoratori
                     + "3 Ordinamento dei Lavoratori per stipendio percepito" + Environment.NewLine
                     + "4 Ordinamento dei lavoratori per anzianita" + Environment.NewLine
                     + "5 Inserimernto nuovo lavoratore : " + Environment.NewLine
-                    +"6 Modifica elemento Lavoratore "+ Environment.NewLine);
+                    +"6 Modifica elemento Lavoratore "+ Environment.NewLine
+                    + "7 Elimina elemento Lavoratore " + Environment.NewLine);
                 ric = Console.ReadLine();
                 // serie di if di controllo su ciò che si è scelto
                 if (ric == "1")
@@ -92,6 +93,11 @@ namespace Lavoratori
                 else if (ric=="6")
                 {
                     Inserimento.Mod(listLA, listLD, listL);
+                    
+                }
+                else if (ric=="7")
+                {
+                    Inserimento.Elimina(listLA, listLD, listL);
                 }
                 fine = Controllo.AltreOprezioni(" effetuare altre operzioni");
             } while (fine);
