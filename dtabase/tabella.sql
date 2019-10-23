@@ -23,4 +23,14 @@ CREATE TABLE [dbo].[Lavoratore](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+INSERT INTO Lavoratore(Nome, Cognome, DataDiNascita, StipendioAnnuale, DataDiAssunzione, Tipo)
+VALUES ('Nunzio','Sava',convert(datetime,'18-06-12 10:34:09 PM',5),10000,NULL,2);
 
+INSERT INTO Lavoratore(Nome, Cognome, DataDiNascita, StipendioAnnuale, DataDiAssunzione, Tipo)
+VALUES ('Marco','Zanca',convert(datetime,'02-05-01 10:34:09 PM',5),50000,convert(datetime,'17-05-12 10:34:09 PM',5),1);
+
+INSERT INTO Lavoratore(Nome, Cognome, DataDiNascita, StipendioAnnuale, DataDiAssunzione, Tipo)
+VALUES ('Pippo','Baudo',convert(datetime,'18-06-12 10:34:09 PM',5),1000000,NULL,2);
+
+INSERT INTO Lavoratore(Nome, Cognome, DataDiNascita, StipendioAnnuale, DataDiAssunzione, Tipo)
+VALUES ('Christiano','Ronaldo',convert(datetime,'02-05-01 10:34:09 PM',5),500000000000000,convert(datetime,'17-05-12 10:34:09 PM',5),1);
