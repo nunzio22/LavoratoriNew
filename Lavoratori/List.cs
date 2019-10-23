@@ -14,7 +14,6 @@ namespace Lavoratori
             DataTable dt = ds.Tables[0];
             foreach (DataRow row in dt.Rows)
             {
-                Console.WriteLine("{0} , {1} , {2} , {3} , {4} , {5} ", row[0], row[1], row[2], row[3], row[4], row[5]);
                 if ((int)row[5] == 1)
                 {
                     LavoratoreDipendete lA = new LavoratoreDipendete
